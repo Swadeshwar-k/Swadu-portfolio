@@ -10,6 +10,7 @@ import Pro3 from '../../src/assets/project/3Project.png'
 import Pro4 from '../../src/assets/project/4Project.png'
 import Pro5 from '../../src/assets/project/5Project.png'
 import Pro6 from '../../src/assets/project/6Project.png'
+import Pro7 from '../../src/assets/project/7Project.png'
 
 const project_data =[
     {
@@ -26,12 +27,19 @@ const project_data =[
         code_link: "https://github.com/Swadu11/TODO-List-react-.git",
         live_link: "https://todo-list-react-inky-mu.vercel.app/"
     },
-     {
-        proj_img: Pro3,
-        name: "React Form with CRUD Functionality",
-        description: "A simple React-based application implementing full CRUD (Create, Read, Update, Delete) functionality for managing employee records. It allows users to add new employees, edit existing details, and delete records, showcasing clean state management and component-based design.",
-        code_link: "https://github.com/Swadu11/React-Form-with-CRUD-Functionality.git",
-        live_link: "https://d25zjv-5173.csb.app/"
+    //  {
+    //     proj_img: Pro3,
+    //     name: "React Form with CRUD Functionality",
+    //     description: "A simple React-based application implementing full CRUD (Create, Read, Update, Delete) functionality for managing employee records. It allows users to add new employees, edit existing details, and delete records, showcasing clean state management and component-based design.",
+    //     code_link: "https://github.com/Swadu11/React-Form-with-CRUD-Functionality.git",
+    //     live_link: "https://d25zjv-5173.csb.app/"
+    // },
+         {
+        proj_img: Pro7,
+        name: "Rock-Paper-Scissors Game",
+        description: "The Rock-Paper-Scissors game is a fun, interactive browser-based project built using HTML, CSS, and JavaScript. It allows users to play the classic hand game against a computer opponent.The project features a clean interface, smooth button interactions, and real-time score tracking for both the player and the computer.",
+        code_link: "https://github.com/Swadeshwar-k/Rock_Paper_scissors.git",
+        live_link: "https://rock-paper-scissors-eg7v.vercel.app/"
     },
      {
         proj_img: Pro4,
@@ -45,14 +53,14 @@ const project_data =[
         name: "dices_game",
         description: "A simple and interactive web-based game where two players roll virtual dice. Built with HTML, CSS, and JavaScript, the game dynamically displays dice images and declares a winner or a draw with each roll.",
         code_link: "https://github.com/Swadu11/dice.git",
-        live_link: "https://swadu11.github.io/dice/"
+        live_link: "https://dice-sooty.vercel.app/"
     },
      {
         proj_img: Pro6,
         name: "Calculator using JavaScript",
         description: "A responsive calculator built with HTML, CSS, and JavaScript that performs basic arithmetic operations with real-time input, error handling, and a modern UI.",
         code_link: "https://github.com/Swadu11/Calculator-js-.git",
-        live_link: "https://swadu11.github.io/Calculator-js-/"
+        live_link: "https://calculator-tau-flame-39.vercel.app/"
     },
 ] 
 
