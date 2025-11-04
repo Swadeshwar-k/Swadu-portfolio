@@ -24,6 +24,7 @@ function Contact() {
       // ✅ Clear form fields
       formRef.current.reset();
     }
+    
   };
 
   return (
