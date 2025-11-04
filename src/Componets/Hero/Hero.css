@@ -63,7 +63,8 @@
     background-color: #cc00cc;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) and (min-width: 769px)
+{
     .Hero h1 {
         width: 90%;
         font-size: 24px;

@@ -1,5 +1,6 @@
 
 
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import AboutMe from './Componets/About/AboutMe'
 import Contact from './Componets/Contact/Contact'
@@ -16,15 +17,16 @@ import Project from './Componets/Project/Project'
 function App() {
 
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <AboutMe />
-      <Project />
-      <Contact />
-      <Footer /> 
-   
-    </>
+     <>
+      
+       <Navbar />
+       <Hero />
+       <AboutMe />
+       <Project />
+       <Contact />
+       <Footer /> 
+     </>
+  
   )
 }
 
