@@ -1,5 +1,5 @@
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import "./Contact.css";
 import Mail from "../../assets/mail_icon.svg";
 import Location from "../../assets/location_icon.svg";
@@ -10,21 +10,58 @@ import "react-toastify/dist/ReactToastify.css";
 function Contact() {
   const [state, handleSubmit] = useForm("xovpopba");
   const formRef = useRef(null);
+    const [loading, setLoading] = useState(false);
+
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await handleSubmit(e);
 
-    if (state.succeeded) {
-      toast.success("Thanks for contacting me! 😊", {
+    const form = formRef.current;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const message = form.message.value.trim();
+
+    //  Frontend validation
+    if (!name || !email || !message) {
+      toast.warn("Please fill all fields before submitting!", {
         position: "top-right",
         autoClose: 3000,
       });
-
-      // ✅ Clear form fields
-      formRef.current.reset();
+      return;
     }
-    
+
+    setLoading(true);
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const response = await fetch("https://formspree.io/f/xovpopba", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: json,
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast.success("Thanks for contacting me! 😊", {
+          position: "top-right",
+          autoClose: 3000,
+        });
+        form.reset(); // clear inputs
+      } else {
+        toast.error(result.error || "Something went wrong. Try again!");
+      }
+    } catch (error) {
+      toast.error("Network error. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

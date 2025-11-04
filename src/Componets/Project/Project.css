@@ -199,3 +199,67 @@ padding: 16px 24px;
   .project-card h2 { font-size: 1.1rem; }
   .project-buttons { gap: 8px; flex-wrap: wrap; justify-content:center; }
 }
+/* .Myproject-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.project-card {
+  background: #32323c;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  width: 280px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.project-buttons button {
+  background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.project-buttons button:hover {
+  transform: scale(1.05);
+} */
+
+/* View More button */
+.view-more {
+  margin-top: 20px;
+  background: white;
+  border: none;
+  color: black;
+  padding: 12px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.view-more:hover {
+  transform: scale(1.05);
+}
+
+/* Hide button on desktop */
+@media (min-width: 769px) {
+  .view-more {
+    display: none;
+  }
+}
