@@ -8,3 +8,23 @@ body{
     color: white;
     font-family: "outfit";
 }
+/* RESPONSIVE HELPERS - paste once (global) */
+:root{
+  /* tweak these if you prefer different max widths */
+  --content-max: 1100px;
+  --gap-lg: 80px;
+  --gap-md: 40px;
+  --gap-sm: 20px;
+}
+
+/* Container to center content */
+.responsive-container {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 20px; /* keeps spacing on very narrow viewports */
+  box-sizing: border-box;
+}
+
+/* fluid font utility */
+.clamp-h1 { font-size: clamp(1.6rem, 3.2vw, 3.6rem); }
+.clamp-p  { font-size: clamp(0.9rem, 1.8vw, 1.125rem); }

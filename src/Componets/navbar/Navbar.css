@@ -1,51 +1,59 @@
-.Navbar{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 170px;
-}
-.Nav-menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 60px;
-    font-size: 20px;
-}
-.Nav-Connect{
-    padding: 20px 40px;
-    border-radius: 50px;
-    background: linear-gradient(267deg, #DA7C25 0.35%, #b923E1 102.06%);
-    font-size: 22px;
-    cursor: pointer;
-    transition: 0.5;
-    
-}
-.Nav-Connect:hover{
-    transform: scale(1.05);
-}
-.Nav-menu li{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-}
-.Nav-menu li img{
-    display: flex;
-    margin: auto;
-}
-.anchor-link{
-    text-decoration: none;
-    color: white;
+
+
+
+
+/* .Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 170px;
 }
 
-/* By default, hide hamburger */
+.Nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+}
+
+.Nav-Connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #DA7C25 0.35%, #b923E1 102.06%);
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.5;
+
+}
+
+.Nav-Connect:hover {
+  transform: scale(1.05);
+}
+
+.Nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.Nav-menu li img {
+  display: flex;
+  margin: auto;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+
 .hamburger {
   display: none;
 }
 
-/* Show hamburger only on small screens */
-@media (max-width: 1024px) and (min-width: 769px)
- {
+@media (max-width: 768px) {
   .hamburger {
     display: block;
     position: fixed;
@@ -60,28 +68,36 @@
 
 
 
-@media (max-width: 1024px) and (min-width: 769px)
- {
+@media (max-width: 768px) {
   .Navbar {
     flex-direction: column;
     align-items: center;
-    margin: 10px 20px; /* Reduce margin on small screens */
+    margin: 10px 20px;
+    
   }
 
   .Navbar h1 {
-    white-space: nowrap;         /* Prevent line break */
-    font-size: 1.5rem;           /* Adjust size */
+    white-space: nowrap;
+
+    font-size: 1.5rem;
+
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
+  .Nav-Connect {
+    display: none;
+  }
+
   .Nav-menu {
     position: fixed;
     top: 70px;
+    right: -250px; 
     right: -250px;
     width: 200px;
     height: auto;
+    background-color: #161513; 
     background-color: #161513;
     flex-direction: column;
     align-items: flex-start;
@@ -92,22 +108,178 @@
     z-index: 999;
     border-radius: 8px 0 0 8px;
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
-  }
+    
 
-  .Nav-menu.open {
+
+  }
+    .Nav-menu.open {
     right: 0;
   }
 
   .hamburger {
     display: block;
     position: fixed;
-    top: 10px;
+    top: 20px;
+
     right: 20px;
     z-index: 1000;
     color: white;
     cursor: pointer;
   }
 
+  .Nav-menu li {
+    width: 100%;
+  }
+
+  .Navbar h1 {
+    display: block;
+
+  }
+
+  .Nav-menu p {
+    padding: 8px 10px;
+    width: 100%;
+    color: white;
+    border-radius: 6px;
+
+    .Nav-menu p:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .Navbar h1 {
+      display: block;
+      white-space: nowrap;
+     
+      font-size: 1.5rem;
+           text-overflow: ellipsis;
+ 
+    }
+  }
+} */
+
+
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 170px;
+}
+
+/* --- NAV MENU (desktop) --- */
+.Nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 60px;
+  font-size: 20px;
+}
+
+.Nav-menu li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.Nav-menu li img {
+  display: flex;
+  margin: auto;
+}
+
+.anchor-link {
+  text-decoration: none;
+  color: white;
+}
+
+/* --- CONNECT BUTTON --- */
+.Nav-Connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  background: linear-gradient(267deg, #da7c25 0.35%, #b923e1 102.06%);
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.Nav-Connect:hover {
+  transform: scale(1.05);
+}
+
+/* --- HAMBURGER MENU ICON --- */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ============ LAPTOP / TABLET ============ */
+@media (max-width: 1024px) {
+  .Navbar {
+    margin: 20px 80px;
+  }
+
+  .Nav-menu {
+    gap: 40px;
+    font-size: 18px;
+  }
+
+  .Nav-Connect {
+    padding: 14px 30px;
+    font-size: 18px;
+  }
+}
+
+/* ============ MOBILE ============ */
+@media (max-width: 768px) {
+  .Navbar {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 20px;
+    position: relative;
+  }
+
+  .Navbar h1 {
+    white-space: nowrap;
+    font-size: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Hide desktop menu */
+  .Nav-menu {
+    position: fixed;
+    top: 70px; /* below navbar title */
+    right: -250px; /* hidden off-screen */
+    width: 200px;
+    background-color: #161513;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+  }
+
+  /* Show menu when open */
+  .Nav-menu.open {
+    right: 0;
+  }
+
+  /* Hamburger visible */
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+
+  /* Hide connect button on mobile */
   .Nav-Connect {
     display: none;
   }

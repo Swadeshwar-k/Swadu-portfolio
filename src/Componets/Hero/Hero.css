@@ -63,15 +63,14 @@
     background-color: #cc00cc;
 }
 
-@media (max-width: 1024px) and (min-width: 769px)
-{
+@media (max-width: 768px) {
     .Hero h1 {
         width: 90%;
         font-size: 24px;
     }
     .Hero p {
         width: 90%;
-        font-size: 18px;
+        font-size: 16px;
     }
     .Hero-action {
         flex-direction: column;
@@ -85,85 +84,22 @@
 }
 
 
+/* HERO - responsive adjustments */
+.Hero { max-width: var(--content-max); margin: 0 auto; padding: 30px 20px; }
 
+/* scale hero heading & paragraph using clamp */
+.Hero h1 { font-size: clamp(1.6rem, 3.6vw, 2.6rem); width: 100%; }
+.Hero p  { font-size: clamp(1rem, 1.6vw, 1.125rem); width: 100%; line-height:1.5; }
 
-
-
-
-
-
-
-
-
-/* 
-.{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* laptop */
+@media (max-width: 1366px) {
+  .Hero img { height: 200px; width: 200px; }
 }
 
-.Profil-pic{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 240px;
-    width: 240px;
-    border-radius: 50%;
-    
+/* mobile & small screens */
+@media (max-width: 768px) {
+  .Hero img { height: 160px; width: 160px; margin-top: 10px; }
+  .Hero-action { flex-direction: column; gap: 12px; }
+  .Contact-me, .my-Resume { width: 100%; padding: 12px; }
 }
 
-.Hero h1{
-    text-align: center;
-    width: 65%;
-    font-size: 45px;
-    font-weight: 600;
-    line-height: 70px;
-
-}
-.Hero h1 Span{
-    background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.Hero p{
-    text-align: center;
-    width: 50%;
-    font-size: 18px;
-    line-height: 30px;
-}
-
-.Hero-action{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 20px 30px;
-    gap: 25px;
-    font-weight: 500;
-    margin-bottom: 50px;
-}
-.Contact-me{
-    padding: 20px 30px;
-    border-radius: 50px;
-    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
-    cursor: pointer;
-    color: white;
-
-    transition: 0.5s;
-}
-.Contact-me:hover{
-    transform: scale(1.05);
-}
-.my-Resume{
-    padding: 20px 30px;
-    border-radius: 50px;
-    background: linear-gradient(264deg, #DF8908 -5.09%, #B415FF 106.28%);
-    cursor: pointer;
-    color: white;
-
-    transition: 0.5s;
-}
-.my-Resume:hover{
-    transform: scale(1.05);
-}   */
