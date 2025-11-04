@@ -13,7 +13,11 @@ function Hero(){
             <div className="Hero-action">
                 <div className="Contact-me"><AnchorLink className='anchor-link ' offset={50} href='#contact'>Contact Me</AnchorLink></div>    
             
-                <a href="/Swadeshwar_K_Resume.pdf" className="my-Resume" target="_blank" rel="noopener noreferrer">  My Resume</a>
+                {/* <a href="/Swadeshwar_K_Resume.pdf" className="my-Resume" target="_blank" rel="noopener noreferrer">  My Resume</a> */}
+                <a href={`/Swadeshwar_K_Resume.pdf?v=${new Date().getTime()}`} className="my-Resume" target="_blank" rel="noopener noreferrer">
+  My Resume
+</a>
+
             </div>
         </div>
     )
