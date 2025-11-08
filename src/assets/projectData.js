@@ -11,7 +11,7 @@ import Pro4 from '../../src/assets/project/4Project.png'
 import Pro5 from '../../src/assets/project/5Project.png'
 import Pro6 from '../../src/assets/project/6Project.png'
 import Pro7 from '../../src/assets/project/7Project.png'
-import Pro8 from '../../src/assets/project/FreshKart.png'
+import Pro8 from '../../src/assets/project/8Project.png'
 
 const project_data =[
         {
