@@ -11,8 +11,16 @@ import Pro4 from '../../src/assets/project/4Project.png'
 import Pro5 from '../../src/assets/project/5Project.png'
 import Pro6 from '../../src/assets/project/6Project.png'
 import Pro7 from '../../src/assets/project/7Project.png'
+import Pro8 from '../../src/assets/project/FreshKart.png'
 
 const project_data =[
+        {
+        proj_img: Pro8,
+        name: "FreshKart",
+        description: "FreshKart is a modern single-page e-commerce web application designed for purchasing fresh fruits and vegetables online. The app provides users with a smooth, interactive shopping experience built using React, Redux, and React Router. It supports user authentication, product browsing, cart management, and a responsive design optimized for both desktop and mobile users.",
+        code_link: "https://github.com/Swadeshwar-k/FreshKart.git",
+        live_link: "https://fresh-kart-nine.vercel.app/"
+    },
     {
         proj_img: Pro1,
         name: "Keeper",
@@ -41,13 +49,13 @@ const project_data =[
         code_link: "https://github.com/Swadeshwar-k/Rock_Paper_scissors.git",
         live_link: "https://rock-paper-scissors-eg7v.vercel.app/"
     },
-     {
-        proj_img: Pro4,
-        name: "Cart_item",
-        description: "A dynamic React-based cart system that allows users to view, delete, and clear products with real-time updates using state and effects.",
-        code_link: "https://github.com/Swadu11/Cart_in_item.git",
-        live_link: "https://cart-in-item.vercel.app/"
-    },
+    //  {
+    //     proj_img: Pro4,
+    //     name: "Cart_item",
+    //     description: "A dynamic React-based cart system that allows users to view, delete, and clear products with real-time updates using state and effects.",
+    //     code_link: "https://github.com/Swadu11/Cart_in_item.git",
+    //     live_link: "https://cart-in-item.vercel.app/"
+    // },
      {
         proj_img: Pro5,
         name: "dices_game",
